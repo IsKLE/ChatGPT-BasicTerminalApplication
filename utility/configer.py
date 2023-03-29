@@ -1,7 +1,6 @@
 import utility.json_reader as jr
 
 
-
 # 该类用于读取配置
 class ConfiGer:
 
@@ -16,8 +15,8 @@ class ConfiGer:
             else:
                 self.history_path = history_path
             # 定义变量(使用self才能使编译器知道这是该类的参数)
-            self.language_type = config_Reader.get_property("language_type2")
-            self.system_prompt = config_Reader.get_property("system_prompt1")
+            self.language_type = config_Reader.get_property("language_type")
+            self.system_prompt = config_Reader.get_property("system_prompt")
             self.temperature = config_Reader.get_property("temperature")
             self.max_token = config_Reader.get_property("max_token")
             self.api_key = config_Reader.get_property("api_key")
@@ -35,5 +34,3 @@ class ConfiGer:
 
     def get_attr(self, attr_name):
         return getattr(self, attr_name)
-
-

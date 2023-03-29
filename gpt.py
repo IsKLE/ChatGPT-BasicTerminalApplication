@@ -76,16 +76,3 @@ while True:
     chat_index += 1
     # 输出内容
     print(response)
-    # 显示历史记录，遍历列表
-    # print("—————————数据———————————")
-    # mu.print_out(chat_list, chat_dic, json_data)  # 由于字典只在调用函数中存在值，所以没有必要进行输出。
-    # mu.print_out(chat_list,  json_data)
-    # try:
-    #     for item in chat_list:
-    #         print(item)
-    # except Exception as e:
-    #     print("错误", e)
-    # print("——————————————————————")
-    # for num in user_prompt.split('\r'):
-    #     print(num)
-    # print("——————————————————————")
