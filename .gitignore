@@ -1,7 +1,7 @@
 # 自定义部分
 .idea/
 featureTest/
-#assets/
+assets/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
