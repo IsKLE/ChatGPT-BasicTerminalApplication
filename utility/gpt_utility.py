@@ -16,11 +16,9 @@ def get_first_answer(system_prompt, user_prompt, model, temperature=0.1, max_tok
 
 
 # 用于普通查询，传递用户的信息，返回GPT的回答内容
-def get_answer(user_prompt, model, temperature=0.1, max_tokens=30):
+def get_answer(chat_list, model, temperature=0.1, max_tokens=30):
     response = openai.ChatCompletion.create(
-        messages=[
-            {"role": "user", "content": user_prompt}
-        ],
+        messages=chat_list,
         model=model,
         max_tokens=max_tokens,
         temperature=temperature
@@ -39,3 +37,22 @@ def print_out(list1, dictionary1, data):
     print(list1)
     print(dictionary1)
     print(data)
+
+
+def user_input(chat_list):
+    user_prompt = ''
+    print("User：")
+    # 用户单独输入“end”，结束输入
+    while True:
+        line = input()
+        if line == 'end':
+            break
+        if line == "new":
+            chat_list.clear()
+            continue
+        else:
+            user_prompt += line + '\r'
+        chat_dic = {"role": "user", "content": user_prompt}
+        chat_list.append(chat_dic)
+    print("GPT：")
+    return user_prompt

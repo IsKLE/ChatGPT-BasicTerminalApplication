@@ -1,8 +1,8 @@
 {
-  "api_key": "YOU-API-KEY",
+  "api_key": "YOUR-API-KEY",
   "max_token": 300,
   "temperature": 0.6,
-  "system_prompt": "我需要一些编程上的帮助。当涉及的函数、方法等具有返回值，传参的代码时，你需要将返回值，传参的意义进行说明，并且给出一些建议。如果你明白，回复ok。本次想询问的代码语言主要是：",
+  "system_prompt": "我需要一些编程上的帮助。当涉及的函数、方法等具有返回值，传参的代码时，你需要将返回值，传参的意义进行说明，并且给出一些建议。本次想询问的代码语言主要是：",
   "language_type": "python",
   "model": "gpt-3.5-turbo"
 }
